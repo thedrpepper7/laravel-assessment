@@ -1,2 +1,6 @@
-@import "partials/header";
-@import "partials/footer";
+// Universal
+
+@import "partials/universal/mixins";
+@import "partials/universal/header";
+@import "partials/universal/footer";
+@import "partials/universal/layout";

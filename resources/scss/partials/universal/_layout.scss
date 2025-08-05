@@ -1,0 +1,29 @@
+@media (max-width: 767px) {
+    .contentwrap {
+        @include contentsizing;
+    }
+}
+
+@media (min-width: 768px) {
+    .contentwrap {
+        max-width: 750px;
+        width: 100%;
+        @include contentsizing;
+    }
+}
+
+@media (min-width: 992px) {
+    .contentwrap {
+        max-width: 970px;
+        width: 100%;
+        @include contentsizing;
+    }
+}
+
+@media (min-width: 1260px) {
+    .contentwrap {
+        max-width: 1200px;
+        width: 100%;
+        @include contentsizing;
+    }
+}

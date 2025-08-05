@@ -1,6 +1,1 @@
-footer {
-    text-align: center;
-    width: 100%;
-    background-color: aqua;
-    color: Red;
-}
+footer{text-align:center;width:100%;background-color:aqua;color:Red}@media (max-width: 767px){.contentwrap{margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}}@media (min-width: 768px){.contentwrap{max-width:750px;width:100%;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}}@media (min-width: 992px){.contentwrap{max-width:970px;width:100%;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}}@media (min-width: 1260px){.contentwrap{max-width:1200px;width:100%;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}}

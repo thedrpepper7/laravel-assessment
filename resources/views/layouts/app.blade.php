@@ -6,15 +6,16 @@
     <title>@yield('title', 'My Laravel App')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
-<body>
+    <body>
 
-    @include('partials.header')
+        @include('partials.header')
+    <div class="contentwrap">
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
-    <main>
-        @yield('content')
-    </main>
+        @include('partials.footer')
 
-    @include('partials.footer')
-
-</body>
+    </body>
 </html>
