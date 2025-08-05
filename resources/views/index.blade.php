@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>my home page</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'Home Page')
+
+@section('content')
+    <h1>Welcome to the Home Page!</h1>
+    <p>This is the main content area.</p>
+    <p>this will be inside the content</p>
+@endsection
