@@ -1,5 +1,18 @@
 header {
-    font-size: x-large;
-    color: white;
-    background-color: blanchedalmond;
+    width: 100%;
+    background-color: $backgroundNavy;
+    padding: 40px 30px;
+    & a {
+        padding: 20px;
+        margin-right: 20px;
+        background-color: $backgroundGrayBlue;
+        color: $textLightGray;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: large;
+        &.active {
+            background-color: $backgroundBlue;
+            color: $textWhite;
+        }
+    }
 }

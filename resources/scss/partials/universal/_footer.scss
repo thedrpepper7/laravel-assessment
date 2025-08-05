@@ -1,6 +1,9 @@
 footer {
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: aqua;
-    color: Red;
+    background-color: $backgroundNavy;
+    padding: 20px 30px;
+    color: $textWhite;
 }

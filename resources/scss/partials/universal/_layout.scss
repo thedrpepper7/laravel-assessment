@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 @media (max-width: 767px) {
     .contentwrap {
         @include contentsizing;
