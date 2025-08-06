@@ -1,16 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
-Route::get('/', function () {
+Route::get('/', [CompanyController::class, 'index']);
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/employees', function () {
+    return view('employees');
+});
+
+Route::get('/authentication', function () {
     return view('authentication');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
-
-Route::get('/home', function () {
-    return view('testpage');
 });
 
