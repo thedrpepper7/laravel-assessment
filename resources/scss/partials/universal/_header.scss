@@ -2,6 +2,9 @@ header {
     width: 100%;
     background-color: $backgroundNavy;
     padding: 40px 30px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
     & a {
         padding: 20px;
         margin-right: 20px;

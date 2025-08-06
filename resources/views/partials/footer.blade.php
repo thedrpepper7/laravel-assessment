@@ -1,3 +1,3 @@
 <footer>
-    <div>testing my footer</div>
+    <div>Leon Grant's Laravel Assessment &copy;</div>
 </footer>
