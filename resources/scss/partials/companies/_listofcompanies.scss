@@ -4,8 +4,5 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
-    & p {
-        text-align: center;
-        line-height: 50px;
-    }
+    align-items: center;
 }

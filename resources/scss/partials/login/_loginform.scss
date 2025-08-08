@@ -1,0 +1,41 @@
+.loginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    & h1 {
+        margin-bottom: 40px;
+        font-size: xx-large;
+        line-height: 4rem;
+    }
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 300px;
+    gap: 25px;
+    & input,
+    & button {
+        padding: 10px;
+        border: none;
+    }
+    & button {
+        background-color: $backgroundBlue;
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid $niceBlue;
+        }
+    }
+    & input {
+        text-decoration: none;
+        outline: none;
+        border-bottom: 1px solid transparent;
+        &:focus {
+            border-bottom: 1px solid $backgroundBlue;
+        }
+    }
+}
