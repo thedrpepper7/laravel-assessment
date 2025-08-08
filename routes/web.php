@@ -5,10 +5,6 @@ use App\Http\Controllers\CompanyController;
 
 Route::get('/', [CompanyController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
 Route::get('/employees', function () {
     return view('employees');
 });
