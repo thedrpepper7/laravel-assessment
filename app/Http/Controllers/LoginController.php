@@ -13,11 +13,30 @@ class LoginController extends Controller
         return view('authentication');
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        $login = $request->validate([
-            'email' => ['required', 'email']
-        ])
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/employees');
+        }
+
+        return back()->withErrors([
+            'email' => 'Invalid Login',
+        ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 
 }

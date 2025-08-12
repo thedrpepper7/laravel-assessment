@@ -5,12 +5,11 @@
 @section('content')
     <div class="loginDiv">
         <h1>Login to view more</h1>
-        <div class="loginForm">
-            <form method="POST" action="{{ route('login') }}">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        <form method="POST" action="{{ route('login') }}" class="loginForm">
+            @csrf
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
 @endsection

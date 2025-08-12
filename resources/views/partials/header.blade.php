@@ -1,5 +1,6 @@
 <header>
     <div>
+        <a href="{{ url('/homepage') }}" class="{{ Request::is('/homepage') ? 'active' : '' }}">Home</a>
         <a href="{{ url('/') }}" class="{{ Request::is('/') ? 'active' : '' }}">Companies</a>
         <a href="{{ url('/employees') }}" class="{{ Request::is('employees') ? 'active' : '' }}">Employees</a>
     </div>
