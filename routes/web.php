@@ -18,8 +18,11 @@ Route::get('/employees', [EmployeesController::class, 'showEmployees'])
 ->name('employees.list');
 
 // Authentication page
-Route::get('/authentication', [LoginController::class, 'showLoginForm'])->name('login.form');
+Route::get('/authentication', [LoginController::class, 'showLoginForm'])->name('login');
 
 // Post form data
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+
+// Post logout input 
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

@@ -18,4 +18,5 @@
         @include('partials.footer')
 
     </body>
+    <script src="{{ asset('js/account/dropdown.js') }}"></script>
 </html>
