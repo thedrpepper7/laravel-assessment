@@ -7,10 +7,10 @@ use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\HomePageController; 
 
 // Home Page
-Route::get('/homepage', [HomePageController::class, 'showHomePage']);
+Route::get('/', [HomePageController::class, 'showHomePage']);
 
 // List of companies
-Route::get('/', [CompanyController::class, 'index']);
+Route::get('/companies', [CompanyController::class, 'index']);
 
 // Employees Page (should be hidden withouth login)
 Route::get('/employees', [EmployeesController::class, 'showEmployees'])
