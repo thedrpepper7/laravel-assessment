@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@yield('title', 'My Laravel App')</title>
+    <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
     <body>
@@ -18,5 +19,5 @@
         @include('partials.footer')
 
     </body>
-    <script src="{{ asset('js/account/dropdown.js') }}"></script>
+    <script type="module" src="{{ asset('js/universal.js') }}"></script>
 </html>
