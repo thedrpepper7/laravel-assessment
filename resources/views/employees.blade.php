@@ -11,18 +11,19 @@
         <input type="text" name="first_name" placeholder="First Name *" required>
         <input type="text" name="last_name" placeholder="Last Name *" required>
         <input type="text" name="company" placeholder="Company">
-        <input type="email" name="email" placeholder="Email">
-        <input type="text" name="phone_number" placeholder="Phone Number">
+        <input type="email" name="email" placeholder="Email" id="employeeEmailInsert">
+        <input type="text" name="phone_number" placeholder="Phone Number" id="employeePhoneInsert">
         <div class="employeeInsertFormBTNs">
             <button type="submit" id="submitEmployeeForm">Add Entry</button>
             <button type="button" id="closeEmployeeForm">Clear</button>
         </div>
+        <span class="errorSpan">Ensure you enter a valid email using only digits</span>
     </form>
     <h1>List of Employees</h1>
     <div class="employeeGrid">
         @foreach ($employees as $employee)
             <div class="employeeDiv">
-                <p>{{ $employee->first_name }} {{ $employee->last_name }} of {{ $employee->company}}</p> 
+                <p>{{ $employee->first_name }} {{ $employee->last_name }} of [{{ $employee->company}}]</p> 
                 <div class="employeeBTNs">
                 <button>Contact Information:</button>
                 <form method="POST" action="{{ route('deleteEmployee') }}" class="deleteForm">

@@ -31,3 +31,16 @@
         border: 1px solid $backgroundGrayBlue;
     }
 }
+
+.errorSpan {
+    display: none;
+}
+
+.errorSpan.show {
+    display: block;
+    text-align: center;
+}
+
+.incorrectEntry {
+    border: 1px solid red !important;
+}
