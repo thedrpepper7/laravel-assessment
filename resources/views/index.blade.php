@@ -10,7 +10,7 @@
             <p>{{ $company->name }} - {{ $company->email }} </p>
             <div class="link-deleteBTN">
                 <a href="{{ $company->website}}" target="_blank"><img src="{{ asset('storage/logos/' . $company->logo) }}" alt="{{ $company->name }}" width="100"></a>
-                <form method="POST" action="{{ route('delete') }}" class="deleteForm">
+                <form method="POST" action="{{ route('deleteCompany') }}" class="deleteForm">
                     @csrf
                     <input type="hidden" name="id" value="{{ $company->id }}">
                     <button class="deleteCompany icomoon"></button>

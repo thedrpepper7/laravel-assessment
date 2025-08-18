@@ -14,7 +14,7 @@ class CompanyController extends Controller
 
     }
 
-    public function delete(Request $request) 
+    public function deleteCompany(Request $request) 
     {
 
         $request->validate([

@@ -1,23 +1,14 @@
-function replaceContact(information) {
-    return `
-        <div class="contactCard">
-            <button class="revertCard">Back</button>
-            ${information}
-        </div>
-    `;
-}
+document.querySelectorAll(".employeeDiv").forEach((card) => {
+    const button = card.querySelector("button");
+    const hiddenContact = card.querySelector(".hiddenContact");
 
-document.querySelectorAll(".employeeDiv button").forEach((button) => {
     button.addEventListener("click", () => {
-        const employeeDiv = button.closest(".employeeDiv");
-        const hiddenContact = button.nextElementSibling.innerHTML;
+        hiddenContact.classList.toggle("show");
 
-        employeeDiv.innerHTML = replaceContact(hiddenContact);
-
-        employeeDiv
-            .querySelector(".revertCard")
-            .addEventListener("click", () => {
-                location.reload();
-            });
+        if (hiddenContact.classList.contains("show")) {
+            button.textContent = "Hide Contact Info";
+        } else {
+            button.textContent = "Contact Information";
+        }
     });
 });
