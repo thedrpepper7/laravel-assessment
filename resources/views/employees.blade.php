@@ -9,7 +9,7 @@
             <div class="employeeDiv">
                 <p>{{ $employee->first_name }} {{ $employee->last_name }} of {{ $employee->company}}</p> 
                 <button>Contact Information:</button>
-                <div class="hiddenContact">
+                <div class="hiddenContact employeeDiv">
                     <p>Email: [{{ $employee->email}}] </p> 
                     <p>Phone Number: [{{ $employee->phone_number }}] </p> 
                 </div>
