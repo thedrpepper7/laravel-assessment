@@ -12,13 +12,13 @@ Route::get('/', [HomePageController::class, 'showHomePage']);
 // List of companies
 Route::get('/companies', [CompanyController::class, 'index']);
 
-// Delete the row from database
-Route::post('/delete', [CompanyController::class, 'delete'])->name('delete');
-
 // Employees Page (should be hidden withouth login)
-Route::get('/employees', [EmployeesController::class, 'showEmployees'])
+Route::get('/employees', [EmployeesController::class, 'index'])
 ->middleware('auth')
 ->name('employees.list');
+
+// Delete the row from database
+Route::post('/delete', [CompanyController::class, 'delete'])->name('delete');
 
 // Authentication page
 Route::get('/authentication', [LoginController::class, 'showLoginForm'])->name('login');

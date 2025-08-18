@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Employee;
 
 class EmployeesController extends Controller
 {
-
-    public function showEmployees() 
+    public function index() 
     {
-        return view('employees');
+        $employees = Employee::all();
+
+        return view('employees', compact('employees'));
     }
+
 } 

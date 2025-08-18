@@ -1,0 +1,34 @@
+.employeeGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 10 equal columns */
+    grid-auto-rows: auto; /* rows height adjusts to content */
+    gap: 10px;
+    max-width: 100%;
+}
+
+.employeeDiv {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    & p {
+        margin: 5px 0 0 0;
+    }
+    & button {
+        margin-top: auto;
+        padding: 5px;
+        border: none;
+        color: white;
+        background-color: $backgroundGrayBlue;
+        width: 50%;
+        &:hover {
+            background-color: $backgroundBlue;
+        }
+    }
+}
+
+.hiddenContact {
+    display: none;
+}
