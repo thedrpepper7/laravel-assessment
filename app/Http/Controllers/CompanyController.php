@@ -26,6 +26,16 @@ class CompanyController extends Controller
 
         return redirect()->back()->with('success', 'Company deleted successfully.');
     }
+
+    public function append(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'nullable|string|max:255',
+            'logo' => 'nullable|string|max:255',
+            'website' => 'nullable|string|max:255',
+        ]);
+    }
 }
 
 

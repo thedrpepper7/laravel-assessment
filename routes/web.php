@@ -26,6 +26,9 @@ Route::post('/deleteEmployee', [EmployeesController::class, 'deleteEmployee'])->
 // Authentication page
 Route::get('/authentication', [LoginController::class, 'showLoginForm'])->name('login');
 
+// Insert the company entry
+Route::post('/insertCompany', [CompanyController::class, 'append'])->name('insertCompany');
+
 // Insert the employee entry
 Route::post('/insertEmployee', [EmployeesController::class, 'append'])->name('insertEmployee');
 

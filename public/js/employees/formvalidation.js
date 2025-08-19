@@ -36,7 +36,7 @@ let phoneNumber = document.querySelector("#employeePhoneInsert");
 let clear = document.querySelector("#closeEmployeeForm");
 
 // error span
-let errorSpan = document.querySelector(".errorSpan");
+let errorSpan = document.querySelector(".errorSpanEmployee");
 
 // submit validation
 

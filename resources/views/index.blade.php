@@ -3,8 +3,21 @@
 @section('title', 'Companies')
 
 @section('content')
+    <form class="companyInsertForm" method="POST" action=" {{ route('insertCompany') }}">
+    
+        @csrf
+        <h1>Company</h1>
+        <input type="text" name="name" placeholder="Company Name" required>
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="logo" placeholder="Logo">
+        <input type="email" name="website" placeholder="Website">
+        <div class="employeeInsertFormBTNs">
+            <button type="submit" id="submitEmployeeForm">Add Entry</button>
+            <button type="button" id="closeEmployeeForm">Clear</button>
+        </div>
+        <span class="errorSpanCompany">Ensure you enter a valid email using only digits</span>
+    </form>
     <h1>Companies</h1>
-
     @foreach ($companies as $company)
         <div class="companyDiv">
             <p>{{ $company->name }} - {{ $company->email }} </p>

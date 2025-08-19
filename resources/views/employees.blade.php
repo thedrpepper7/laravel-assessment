@@ -17,7 +17,7 @@
             <button type="submit" id="submitEmployeeForm">Add Entry</button>
             <button type="button" id="closeEmployeeForm">Clear</button>
         </div>
-        <span class="errorSpan">Ensure you enter a valid email using only digits</span>
+        <span class="errorSpanEmployee">Ensure you enter a valid email using only digits</span>
     </form>
     <h1>List of Employees</h1>
     <div class="employeeGrid">
@@ -29,7 +29,7 @@
                 <form method="POST" action="{{ route('deleteEmployee') }}" class="deleteForm">
                     @csrf
                     <input type="hidden" name="id" value="{{ $employee->id }}">
-                    <button class="deleteEmployee icomoon">Delete</button>
+                    <button class="deleteEmployees">Delete</button>
                 </form>
                 </div>
                 <div class="hiddenContact">
