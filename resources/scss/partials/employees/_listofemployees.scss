@@ -73,3 +73,21 @@
 .hiddenContact.show {
     max-height: 200px;
 }
+
+@media (max-width: 1360px) {
+    .employeeGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .employeeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .employeeGrid {
+        grid-template-columns: 1fr;
+    }
+}

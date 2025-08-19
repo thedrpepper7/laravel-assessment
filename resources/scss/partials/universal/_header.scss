@@ -22,3 +22,19 @@ header {
         }
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        & a {
+            margin-right: 5px;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 456px) {
+    header {
+        gap: 25px;
+    }
+}

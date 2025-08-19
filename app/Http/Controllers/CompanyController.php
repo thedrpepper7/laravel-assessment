@@ -32,14 +32,21 @@ class CompanyController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'nullable|string|max:255',
-            'logo' => 'nullable|string|max:255',
+            'logo' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
             'website' => 'nullable|string|max:255',
         ]);
+
+        $logoName = null;
+
+        if($request->hasFile('logo')) {
+            $logoName = time() . '.' . $request->logo->extension();
+            $request->logo->move(public_path('storage/logos'), $logoName);
+        }
 
         Company::create([
             'name' => $request->name,
             'email' => $request->email,
-            'logo' => $request->logo,
+            'logo' => $logoName,
             'website' => $request->website,
         ]);
 

@@ -3,14 +3,15 @@
 @section('title', 'Companies')
 
 @section('content')
-    <form class="companyInsertForm" method="POST" action=" {{ route('insertCompany') }}">
+    <form class="companyInsertForm" method="POST" action=" {{ route('insertCompany') }}" enctype="multipart/form-data">
     
         @csrf
-        <h1>Company</h1>
+        <h1>Company Insert</h1>
         <input type="text" name="name" placeholder="Company Name" id="companyName" required>
         <input type="email" name="email" placeholder="Email">
-        <input type="text" name="logo" placeholder="Logo">
-        <input type="text" name="website" placeholder="Website">
+        <input type="url" name="website" placeholder="Website">
+        <label for="logo" id="uploadCompanyLabel" class="icomoon">Upload your company image</label>
+        <input type="file" name="logo" placeholder="Logo">
         <div class="companyInsertFormBTNs">
             <button type="submit" id="submitCompanyForm">Add Entry</button>
             <button type="button" id="closeCompanyForm">Clear</button>
