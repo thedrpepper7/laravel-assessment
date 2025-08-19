@@ -1,3 +1,4 @@
+.companyInsertForm,
 .employeeInsertForm {
     display: flex;
     margin-bottom: 50px;
@@ -22,9 +23,9 @@
     }
 }
 
+.companyInsertFormBTNs,
 .employeeInsertFormBTNs {
     display: flex;
-    justify-content: space-between;
     width: 50%;
     margin: 10px auto;
     & button {
@@ -32,11 +33,13 @@
     }
 }
 
-.errorSpan {
+.errorSpanEmployee,
+.errorSpanCompany {
     display: none;
 }
 
-.errorSpan.show {
+.errorSpanEmployee.show,
+.errorSpanCompany.show {
     display: block;
     text-align: center;
 }

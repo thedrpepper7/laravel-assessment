@@ -35,6 +35,15 @@ class CompanyController extends Controller
             'logo' => 'nullable|string|max:255',
             'website' => 'nullable|string|max:255',
         ]);
+
+        Company::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'logo' => $request->logo,
+            'website' => $request->website,
+        ]);
+
+        return redirect()->back()->with('success', 'Company added successfully.');
     }
 }
 

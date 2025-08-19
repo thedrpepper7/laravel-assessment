@@ -7,13 +7,13 @@
     
         @csrf
         <h1>Company</h1>
-        <input type="text" name="name" placeholder="Company Name" required>
-        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="name" placeholder="Company Name" id="companyName" required>
+        <input type="email" name="email" placeholder="Email">
         <input type="text" name="logo" placeholder="Logo">
-        <input type="email" name="website" placeholder="Website">
-        <div class="employeeInsertFormBTNs">
-            <button type="submit" id="submitEmployeeForm">Add Entry</button>
-            <button type="button" id="closeEmployeeForm">Clear</button>
+        <input type="text" name="website" placeholder="Website">
+        <div class="companyInsertFormBTNs">
+            <button type="submit" id="submitCompanyForm">Add Entry</button>
+            <button type="button" id="closeCompanyForm">Clear</button>
         </div>
         <span class="errorSpanCompany">Ensure you enter a valid email using only digits</span>
     </form>
